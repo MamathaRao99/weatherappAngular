@@ -16,7 +16,6 @@ export class HeaderComponent {
     this.dataService.getweatherData(this.searchText).subscribe(data => {
       console.log(data);
     })
-
   }
   
 }
