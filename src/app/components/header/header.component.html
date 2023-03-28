@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="searchWeatherLogo">
+        <div class="weatherimage">
+            <img src="../../../assets/logo_web.png" alt="weatherLogo" >
+        </div>
+        <form class="searchBar" #form="ngForm" (ngSubmit)="searchData()">
+            <input type="text" placeholder="Search City" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}">
+            <span class="pi pi-search search" style="color: #ffffffb8"></span>
+        </form>
+    </div>
+ 
+    <app-home-tab></app-home-tab>
+</div>

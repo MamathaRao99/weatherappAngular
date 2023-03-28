@@ -1,0 +1,37 @@
+@import "primeicons/primeicons.css";
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top:3em;
+}
+.searchWeatherLogo{
+    display: flex;
+}
+.weatherimage{
+    flex-basis:55%;
+}
+.searchBar{
+    width: 100%;
+    flex-basis:45%;
+    position: relative;
+    input{
+        width:100%;
+        padding:12px;
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        color: white;
+        outline: none;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.411);
+    }
+    ::placeholder{
+        color: #ffffff86;
+    }
+    .search{
+        position: absolute;
+        top: 13px;
+        right: 10px;
+    }
+}
