@@ -8,6 +8,16 @@
             <span class="pi pi-search search" style="color: #ffffffb8"></span>
         </form>
     </div>
- 
-    <app-home-tab></app-home-tab>
+    <!-- <app-home [cityData] = "weatherData"></app-home> -->
 </div>
+<div class="tabDate">
+    <div class="homeTabs">
+        <div class="home" routerLink="home" routerLinkActive="active">Home</div>
+        <div class="fav"routerLink="favourite" routerLinkActive="active">Favourite</div>
+        <div class="recent"routerLink="recent" routerLinkActive="active">Recent</div>
+    </div>
+    <div class="dateTime">{{ dateObj | date:'medium' }}</div>
+</div>
+<!-- <app-home [cityData]="weatherData"></app-home> -->
+<app-favourites [cityData]="weatherData"></app-favourites>
+

@@ -3,11 +3,13 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { HometabComponent } from './hometab/hometab.component';
 
 const routes: Routes = [
-  {path:'',component: HomeComponent},
+  {path:'home',component: HomeComponent},
   {path:'favourite',component: FavouritesComponent},
-  {path:'recent',component: RecentComponent}
+  {path:'recent',component: RecentComponent},
+  {path:'',component:HometabComponent}
 ];
 
 @NgModule({

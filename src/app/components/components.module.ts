@@ -3,20 +3,20 @@ import { CommonModule } from '@angular/common';
 import { ComponentsRoutingModule } from './components-routing.module';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import { HomeTabComponent } from './home-tab/home-tab.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { RecentComponent } from './recent/recent.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
+import { HometabComponent } from './hometab/hometab.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeaderComponent,
-    HomeTabComponent,
     FavouritesComponent,
-    RecentComponent
+    RecentComponent,
+    HometabComponent
   ],
   imports: [
     CommonModule,
@@ -28,9 +28,9 @@ import { TabViewModule } from 'primeng/tabview';
   exports: [
     HomeComponent,
     HeaderComponent,
-    HomeTabComponent,
     FavouritesComponent,
-    RecentComponent
+    RecentComponent,
+    HometabComponent
   ]
 })
 export class ComponentsModule { }

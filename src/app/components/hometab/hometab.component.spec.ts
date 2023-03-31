@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeTabComponent } from './home-tab.component';
+import { HometabComponent } from './hometab.component';
 
-describe('HomeTabComponent', () => {
-  let component: HomeTabComponent;
-  let fixture: ComponentFixture<HomeTabComponent>;
+describe('HometabComponent', () => {
+  let component: HometabComponent;
+  let fixture: ComponentFixture<HometabComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeTabComponent ]
+      declarations: [ HometabComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HomeTabComponent);
+    fixture = TestBed.createComponent(HometabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

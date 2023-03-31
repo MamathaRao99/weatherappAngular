@@ -8,14 +8,19 @@ import { Component,OnInit } from '@angular/core';
 })
 export class HeaderComponent {
   searchText: string = "";
+  weatherData : any = [];
+  dateObj: number = Date.now();
+
   constructor(private dataService:ApiDataService) { 
   }
 
   searchData() {
     console.log("SearchData", this.searchText);
-    this.dataService.getweatherData(this.searchText).subscribe(data => {
-      console.log(data);
-    })
+    this.dataService.getweatherData(this.searchText).subscribe(
+      (data) => {
+        this.weatherData = data;
+        console.log("WeatherData",  this.weatherData);
+      })
   }
   
 }

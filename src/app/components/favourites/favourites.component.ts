@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,Input} from '@angular/core';
 
 @Component({
   selector: 'app-favourites',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./favourites.component.scss']
 })
 export class FavouritesComponent {
+  @Input () cityData : any =[];
 
 }
