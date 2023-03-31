@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HometabComponent } from './components/hometab/hometab.component';
 
 const routes: Routes = [
-  // {path:'',component: HometabComponent},
+
 ];
 
 @NgModule({

@@ -5,12 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiDataService {
+  searchCity !: [];
 
-  constructor(private http:HttpClient) { 
-    
+  constructor(private http: HttpClient) {
+
   }
-  getweatherData(city : string) {
-    return this.http.get('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=a53344cef106497d3d688f5887f3354f');
+  getweatherData(city: string) {
+    return this.http.get('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a53344cef106497d3d688f5887f3354f' + '&units=metric');
   }
-  
+
 }

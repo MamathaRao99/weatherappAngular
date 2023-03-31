@@ -1,0 +1,52 @@
+.cityDetails {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+  margin-bottom: 20px;
+}
+.cityName {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 47px;
+}
+.addFav {
+  display: flex;
+  gap: 0.2em;
+  align-items: center;
+  margin-top: 22px;
+  cursor: pointer;
+}
+.favText {
+  color: #ffd639;
+}
+.normalText {
+  color: #ffffff;
+}
+.nHeart {
+  color: #ffffff;
+}
+.fillHeart {
+  color: #ffd639;
+}
+.cityWeatherDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  margin-top: 26px;
+  .weatherImage {
+    margin-bottom: 5px;
+  }
+  .temperature {
+    font-size: 64px;
+  }
+  .description {
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    padding-bottom: 5em;
+  }
+}

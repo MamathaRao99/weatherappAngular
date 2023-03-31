@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
 import { HometabComponent } from './hometab/hometab.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HometabComponent } from './hometab/hometab.component';
     HeaderComponent,
     FavouritesComponent,
     RecentComponent,
-    HometabComponent
+    FooterComponent,
+    HometabComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { HometabComponent } from './hometab/hometab.component';
     HeaderComponent,
     FavouritesComponent,
     RecentComponent,
-    HometabComponent
+    FooterComponent,
+    HometabComponent,
   ]
 })
 export class ComponentsModule { }

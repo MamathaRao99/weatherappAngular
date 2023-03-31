@@ -1,0 +1,24 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  margin-top: 3.5em;
+  .minMax,.prescDetails,.humidity,.wind,.visibility{
+    display: flex;
+    flex-basis:12%;
+    gap: 1em;
+    font-size: 15px;
+  }
+  .minMaxDetails,
+  .percent,
+  .humidityDetails,
+  .windDetails,
+  .visibilityDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  .details{
+      font-size: 22px;
+      font-weight: 500;
+  }
+}
