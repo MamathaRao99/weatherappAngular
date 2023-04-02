@@ -1,0 +1,15 @@
+.noRecents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding:10em;
+
+    .noFav {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top:20px;
+    }
+}

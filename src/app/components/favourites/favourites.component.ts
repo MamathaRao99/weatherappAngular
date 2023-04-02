@@ -6,6 +6,5 @@ import { Component ,Input} from '@angular/core';
   styleUrls: ['./favourites.component.scss']
 })
 export class FavouritesComponent {
-  @Input () cityData : any =[];
-
+ favData: any = JSON.parse(localStorage.getItem('favourites') || '[]');
 }
