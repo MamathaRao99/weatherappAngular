@@ -1,0 +1,98 @@
+.noRecents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 10em;
+
+  .noFav {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+}
+.favDetails {
+  background-color: #ffffff85;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+  margin-bottom: 5px;
+  .cityName {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    width: 10%;
+  }
+}
+.noOfCities{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 12px 10px;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  .length,.remove{
+    cursor: pointer;
+  }
+}
+.cityDetails {
+  display: flex;
+  width: 30%;
+  gap: 15px;
+  align-items: center;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 21px;
+  justify-content: flex-start;
+  .temp {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  span {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.nHeart {
+  cursor: pointer;
+  color: #ffffff;
+}
+.fillHeart {
+  cursor: pointer;
+  color: #ffd639;
+}
+.buttonmodal {
+ display: flex;
+ margin: 61px 10px 0 0;
+ align-items: flex-end;
+ justify-content: flex-end;
+ gap: 20px;
+ .noBtn {
+ background-color: rgba(29, 10, 10, 0.226);
+ outline: none;
+ border: none;
+ cursor: pointer;
+ color: #000000;
+ font-family: Roboto;
+ font-size: 15px;
+ font-weight: 500;
+ padding: 10px 31px;
+ font-family: 400;
+ font-size: 15px;
+ }
+ button.modalbtn {
+ outline: none;
+ border: none;
+ cursor: pointer;
+ padding: 10px 31px;
+ background-color: #f76b1c;
+ color: #ffffff;
+ font-family: 400;
+ font-size: 15px;
+ }
+ }

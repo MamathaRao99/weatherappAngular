@@ -4,9 +4,8 @@
         {{cityData.name}}
     </div>
     <div class="addFav">
-        <!-- <i (click)="onHeartFill()" [ngClass]="heartFill ?  'pi pi-heart-fill fillHeart' : 'pi pi-heart nHeart'  "></i> -->
         <i class="pi pi-heart-fill fillHeart" *ngIf="heartFill" (click)="removeFav()"></i>
-        <i class="pi pi-heart nHeart" *ngIf="!heartFill"  (click)="addToFav()" ></i>
+        <i class="pi pi-heart nHeart" *ngIf="!heartFill" (click)="addToFav()"></i>
         <div [ngClass]="heartFill ?  'favText' :'normalText' ">
             {{heartFill ? 'Added to Favourites':'Add to Favourites' }}
         </div>

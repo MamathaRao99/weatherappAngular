@@ -1,17 +1,18 @@
 import { ApiDataService } from './../../service/api-data.service';
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
   searchText: string = "Udupi";
   weatherData: any = [];
   dateObj: number = Date.now();
   recent: any = [];
-  constructor(private dataService: ApiDataService , private router: Router) {
+  isRecent: boolean = false;
+  constructor(private dataService: ApiDataService, private router: Router) {
   }
   ngOnInit(): void {
     this.searchText = ''
@@ -21,18 +22,21 @@ export class HeaderComponent implements OnInit{
     this.gettingdata(this.searchText);
     this.searchText = '';
     this.router.navigate(['home']);
-    // if(this.weatherData.id === this.)
   }
-  gettingdata(city:any) {
+  gettingdata(city: any) {
     this.dataService.getweatherData(city).subscribe(
-      (data:any) => {
+      (data: any) => {
         this.weatherData = data;
-        localStorage.setItem("weatherData", JSON.stringify(this.weatherData));
-        this.recent.push(this.weatherData);
-        localStorage.setItem('recent', JSON.stringify(this.recent));
         this.dataService.searchCity = this.weatherData;
+        localStorage.setItem("weatherData", JSON.stringify(this.weatherData));
+        this.recent = JSON.parse(localStorage.getItem('recent') || '[]');
+        this.isRecent = this.recent.some((ele: any) => ele.id === this.weatherData.id)
+        if (!this.isRecent) {
+          this.recent.push(this.weatherData);
+          localStorage.setItem('recent', JSON.stringify(this.recent));
+        }
       })
-  
-  
+
+
   }
 }

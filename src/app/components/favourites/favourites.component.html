@@ -1,11 +1,35 @@
-<!-- <div  *ngIf="favData.length < 0" class="noRecents">
+{{onRefresh()}}
+<div *ngIf="favData.length <= 0" class="noRecents">
     <div class="notFoundImg">
         <img src="../../../assets/icon_nothing.png" alt="">
     </div>
     <div class="noFav">
         No Favourites added
     </div>
-</div> -->
-<div class="favDetails">
-    <div class="cityName">{{favData[0].name}}</div>
+</div>
+<div class="noOfCities" *ngIf="favData.length > 0">
+    <div class="length">{{favData.length}} City added as favourite</div>
+    <div class="remove" (click)="showDialog()">Remove All</div>
+</div>
+
+<p-dialog [(visible)]="visible" [modal]="true" [draggable]="false" [closable]="false" [resizable]="false"
+    [style]="{ height: '200px',backgroundColor:'white','padding':'50px 20px 0 15px' }">
+    <p-header
+        [ngStyle]="{'font-size': '18px',padding: '86px 20px 10px 10px','font-weight': '500','text-align': 'center','margin-top':'85px'}">
+        Are you sure want to remove all the favourites?
+    </p-header>
+    <div class="buttonmodal">
+        <button class="noBtn" (click)="noclr()">NO</button>
+        <button class="modalbtn" (click)="yes()">YES</button>
+    </div>
+</p-dialog>
+
+<div class="favDetails" *ngFor="let data of favData">
+    <div class="cityName">{{data.name}}</div>
+    <div class="cityDetails">
+        <div class="favImg"><img src="../../../assets/icon_precipitation_info.png" alt="favImg"></div>
+        <div class="temp">{{data.main.temp | number:'1.0-0'}}<span>°C</span></div>
+        <div class="desc">{{data.weather[0].description}}</div>
+    </div>
+    <i class="pi pi-heart-fill fillHeart" (click)="removeFavourites(data)"></i>
 </div>

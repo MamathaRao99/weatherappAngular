@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { TabViewModule } from 'primeng/tabview';
 import { HometabComponent } from './hometab/hometab.component';
 import { FooterComponent } from './footer/footer.component';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { FooterComponent } from './footer/footer.component';
     ComponentsRoutingModule,
     FormsModule,
     HttpClientModule,
-    TabViewModule
+    TabViewModule,
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   exports: [
     HomeComponent,
@@ -34,6 +40,7 @@ import { FooterComponent } from './footer/footer.component';
     RecentComponent,
     FooterComponent,
     HometabComponent,
+
   ]
 })
 export class ComponentsModule { }
